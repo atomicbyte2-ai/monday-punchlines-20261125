@@ -1,6 +1,6 @@
 # Monday Morning Punchlines
 
-> Monday morning: my coffee asked for a raise, my inbox asked for a meeting, and my bed asked for a lawyer.
+> Monday morning: my coffee filed for a raise, my inbox scheduled a meeting, and my bed hired a lawyer.
 
 `main.ts` holds the joke as a single constant, validates it against the bounty gate (1–200 characters, a single line, no control characters, not only whitespace), then writes it as `entry.txt` — with no trailing newline — into `MAKEFUN_OUTPUT_DIR` (default `/output`), creating the directory if needed, and logs the character count.
 

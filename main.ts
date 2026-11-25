@@ -10,7 +10,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const LINE =
-  "Monday morning: my coffee asked for a raise, my inbox asked for a meeting, and my bed asked for a lawyer.";
+  "Monday morning: my coffee filed for a raise, my inbox scheduled a meeting, and my bed hired a lawyer.";
 
 function validate(line: string): void {
   if (line.length < 1 || line.length > 200) {
@@ -21,6 +21,10 @@ function validate(line: string): void {
   }
   if (line.includes("\n") || line.includes("\r")) {
     throw new Error("Line must be a single line");
+  }
+  // The bounty is a joke about Monday mornings: the line must say so.
+  if (!/monday/i.test(line)) {
+    throw new Error("Line must be about Monday mornings");
   }
   // Reject control characters (except none are expected here).
   for (const ch of line) {
